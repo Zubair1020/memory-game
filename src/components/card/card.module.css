@@ -20,9 +20,13 @@
   transform: rotateY(90deg);
   transition: transform 0.2s ease-in;
 }
+
 .flipped .front {
   transform: rotateY(0deg);
   transition-delay: 0.2s;
+}
+.flipped img {
+  cursor: not-allowed;
 }
 
 /* Back of the card - cover */
