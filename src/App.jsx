@@ -52,10 +52,7 @@ const App = () => {
 
     setCards(shuffledCards);
     setTurns(0);
-    setChoice({
-      choiceOne: null,
-      choiceTow: null,
-    });
+    setChoice({...INIT});
   };
 
   // handel a choice
@@ -66,10 +63,7 @@ const App = () => {
   };
 
   const resetTurns = () => {
-    setChoice({
-      choiceOne: null,
-      choiceTow: null,
-    });
+    setChoice({...INIT});
     setTurns(turns + 1);
     setDisabled(false);
   };
@@ -79,7 +73,7 @@ const App = () => {
       <h1>Magic Match</h1>
       <button onClick={shuffledCards}>New Game</button>
 
-      <div className={styles.card_gird}>
+      <section className={styles.card_gird}>
         {cards.map((card) => (
           <Card
             key={card.id}
@@ -89,7 +83,7 @@ const App = () => {
             disabled={disabled}
           />
         ))}
-      </div>
+      </section>
 
       <p>Turns: {turns}</p>
     </div>

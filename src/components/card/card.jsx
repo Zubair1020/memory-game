@@ -3,7 +3,7 @@ import styles from "./card.module.css";
 const Card = ({card, handelChoice, flipped, disabled}) => {
   return (
     <div className={styles.card}>
-      <div className={flipped ? styles.flipped : ""}>
+      <div className={flipped ? styles.flipped : null}>
         <img className={styles.front} src={card.src} />
         <img
           className={styles.back}
